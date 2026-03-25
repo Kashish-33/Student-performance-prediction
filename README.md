@@ -20,7 +20,7 @@ preparation course completion, reading score, and writing score.
 
 | Model                  | Test R² Score |
 |------------------------|---------------|
-| Ridge Regression       | 0.8806 ✅ Best |
+| Ridge Regression       | 0.8806        |
 | Linear Regression      | 0.8803        |
 | Random Forest          | 0.8551        |
 | CatBoost Regressor     | 0.8516        |
