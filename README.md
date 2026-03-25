@@ -38,19 +38,7 @@ preparation course completion, reading score, and writing score.
 - Deployment: AWS Elastic Beanstalk
 - Others: Pandas, NumPy, Matplotlib, Seaborn
 
-## Project Structure
 
-├── artifacts/              # Saved model and preprocessor (.pkl)
-├── catboost_info/          # CatBoost training logs
-├── data/
-│   ├── 1. EDA STUDENT.ipynb
-│   └── 2. MODEL TRAINING.ipynb
-├── src/                    # Modular pipeline code
-├── templates/              # HTML templates (Flask)
-├── application.py          # Flask app entry point
-├── requirements.txt
-├── setup.py
-└── .ebextensions/          # AWS Elastic Beanstalk config
 
 ## How to Run Locally
 
