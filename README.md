@@ -2,7 +2,7 @@
 
 An end-to-end machine learning project that predicts a student's math
 score based on demographic and academic features. The trained model is
-served via a Flask web application deployed on AWS Elastic Beanstalk.
+served via a Streamlit web application .
 
 ## Problem Statement
 
@@ -34,8 +34,7 @@ preparation course completion, reading score, and writing score.
 
 - Language: Python
 - ML Libraries: Scikit-learn, CatBoost, XGBoost
-- Web Framework: Flask
-- Deployment: AWS Elastic Beanstalk
+- Web Framework: Streamlit
 - Others: Pandas, NumPy, Matplotlib, Seaborn
 
 
@@ -46,5 +45,5 @@ preparation course completion, reading score, and writing score.
 2. Install dependencies:
    pip install -r requirements.txt
 3. Run the app:
-   python application.py
-4. Open http://localhost:5000 in your browser
+   streamlit run streamlit_app.py
+4. Open http://localhost:8504 in your browser
