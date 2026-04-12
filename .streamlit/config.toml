@@ -1,0 +1,9 @@
+[theme]
+base = "light"
+primaryColor = "#5c6bc0"
+backgroundColor = "#f5f3ee"
+secondaryBackgroundColor = "#ffffff"
+textColor = "#1a1a1a"
+
+[server]
+pythonVersion = "3.11"
