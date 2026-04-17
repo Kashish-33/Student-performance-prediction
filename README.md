@@ -1,49 +1,117 @@
-  ## # Student Performance Prediction
-
-An end-to-end machine learning project that predicts a student's math
-score based on demographic and academic features. The trained model is
-served via a Streamlit web application .
-
-## Problem Statement
-
-Predict a student's math score (out of 100) using features such as
-gender, race/ethnicity, parental level of education, lunch type, test
-preparation course completion, reading score, and writing score.
-
-## Dataset
-
-- Source: Students Performance in Exams (Kaggle)
-- Size: 1000 records, 8 features
-- Target Variable: Math Score (continuous — regression problem)
-
-## Models Evaluated
-
-| Model                  | Test R² Score |
-|------------------------|---------------|
-| Ridge Regression       | 0.8806        |
-| Linear Regression      | 0.8803        |
-| Random Forest          | 0.8551        |
-| CatBoost Regressor     | 0.8516        |
-| AdaBoost Regressor     | 0.8428        |
-| XGBoost Regressor      | 0.8278        |
-| Lasso                  | 0.8253        |
-| K-Neighbors Regressor  | 0.7838        |
-| Decision Tree          | 0.7100        |
-
-## Tech Stack
-
-- Language: Python
-- ML Libraries: Scikit-learn, CatBoost, XGBoost
-- Web Framework: Streamlit
-- Others: Pandas, NumPy, Matplotlib, Seaborn
+#  Student Performance Prediction
 
 
+A machine learning web application that predicts student exam scores based on demographic and academic background factors. Built as an end-to-end ML project covering data ingestion, preprocessing, model training, evaluation, and deployment.
 
-## How to Run Locally
+---
 
-1. Clone the repository
-2. Install dependencies:
-   pip install -r requirements.txt
-3. Run the app:
-   streamlit run streamlit_app.py
-4. Open http://localhost:8504 in your browser
+##  Live Demo
+
+ **[Try it here](https://student-performance-prediction-jckgbdv53yhtyjf9ksxhqe.streamlit.app)**
+
+---
+
+##  Problem Statement
+
+Predict a student's **math score** based on features like gender, race/ethnicity, parental education level, lunch type, test preparation course, and scores in reading and writing.
+
+---
+
+##  ML Pipeline
+
+```
+Raw Data → Data Ingestion → Preprocessing → Model Training → Evaluation → Prediction
+```
+
+- **Data Ingestion** — Loads and splits data into train/test sets
+- **Data Transformation** — Handles numerical scaling and categorical encoding via `ColumnTransformer`
+- **Model Training** — Trains and evaluates multiple regression models, saves the best one
+
+---
+
+##  Models Benchmarked
+
+| Model | R² Score |
+|---|---|
+| **Ridge Regression**  | **0.88** |
+| Linear Regression | 0.87 |
+| Lasso | 0.82 |
+| ElasticNet | 0.81 |
+| Random Forest | 0.85 |
+| Gradient Boosting | 0.87 |
+| XGBoost | 0.86 |
+| CatBoost | 0.87 |
+| AdaBoost | 0.84 |
+
+> **Best Model:** Ridge Regression with R² = 0.88
+
+---
+
+##  Project Structure
+
+```
+student-ml-project/
+├── src/                        # Core ML source code
+├── notebook/
+│   ├── data/
+│   │   └── stud.csv            # Raw dataset
+│   ├── 1. EDA STUDENT.ipynb    # Exploratory Data Analysis
+│   └── 2. MODEL TRAINING.ipynb # Model training & evaluation
+├── artifacts/                  # Saved model & preprocessor (auto-generated)
+├── catboost_info/              # CatBoost training metadata
+├── logs/                       # Training logs (auto-generated)
+├── streamlit_app.py            # Streamlit frontend
+├── setup.py
+├── requirements.txt
+└── runtime.txt                 # Python version for Streamlit Cloud
+```
+
+---
+
+##  Features Used
+
+| Feature | Type |
+|---|---|
+| Gender | Categorical |
+| Race/Ethnicity | Categorical |
+| Parental Level of Education | Categorical |
+| Lunch Type | Categorical |
+| Test Preparation Course | Categorical |
+| Reading Score | Numerical |
+| Writing Score | Numerical |
+
+**Target:** Math Score (continuous)
+
+---
+
+##  Run Locally
+
+```bash
+# Clone the repo
+git clone https://github.com/Kashish-33/student-performance-prediction.git
+cd student-performance-prediction
+
+# Create and activate virtual environment
+python -m venv venv
+venv\Scripts\activate        # Windows
+
+
+# Install dependencies
+pip install -r requirements.txt
+
+# Run the app
+streamlit run streamlit_app.py
+```
+
+---
+
+##  Tech Stack
+
+- **Language:** Python 3.8+
+- **ML:** Scikit-Learn, XGBoost, CatBoost
+- **Frontend:** Streamlit
+- **Deployment:** Streamlit Cloud
+- **Logging & Exception Handling:** Custom modules
+
+---
+
